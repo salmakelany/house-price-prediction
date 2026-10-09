@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🏠 House Price Prediction</h1>
+        <p class="subtitle">
+            Enter the property details to predict its price
+        </p>
+
+        <form id="predictionForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Carpet Area (sqft)</label>
+                    <input type="number" id="carpet_area_sqft" placeholder="e.g. 700" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Floor Number</label>
+                    <input type="number" id="floor_num" placeholder="e.g. 5" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Bathroom</label>
+                    <input type="number" id="bathroom" placeholder="e.g. 2" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Balcony</label>
+                    <input type="number" id="balcony_num" placeholder="e.g. 1" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Location</label>
+                    <select id="location_grouped" required>
+                        <option value="">Select Location</option>
+                        <option value="thane">Thane</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Furnishing</label>
+                    <select id="Furnishing" required>
+                        <option value="">Select Furnishing</option>
+                        <option value="Furnished">Furnished</option>
+                        <option value="Semi-Furnished">Semi-Furnished</option>
+                        <option value="Unfurnished">Unfurnished</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Transaction</label>
+                    <select id="Transaction" required>
+                        <option value="">Select Transaction</option>
+                        <option value="Resale">Resale</option>
+                        <option value="New Property">New Property</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Ownership</label>
+                    <select id="Ownership" required>
+                        <option value="">Select Ownership</option>
+                        <option value="Freehold">Freehold</option>
+                        <option value="Co-operative Society">Co-operative Society</option>
+                        <option value="Power of Attorney">Power of Attorney</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Facing</label>
+                    <select id="facing">
+                        <option value="">Select Facing</option>
+                        <option value="East">East</option>
+                        <option value="West">West</option>
+                        <option value="North">North</option>
+                        <option value="South">South</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit" id="predictBtn">
+                Predict Price
+            </button>
+
+        </form>
+
+        <div id="loading" class="loading hidden">
+            Predicting...
+        </div>
+
+        <div id="result" class="result hidden">
+            <h2>Predicted Price</h2>
+            <p id="price"></p>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
